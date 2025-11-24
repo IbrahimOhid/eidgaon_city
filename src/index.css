@@ -1,0 +1,69 @@
+/*font URL ⤵ */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap");
+
+@import "tailwindcss";
+
+/*font start */
+@theme {
+  --font-Noto-Serif: "Noto Serif Bengali", serif;
+}
+/*font end */
+/* button style start here */
+.button {
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: none;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    #900c3f,
+    #ff7ee2,
+    #06d001,
+    #16c47f,
+    #f8de22,
+    #f94c10,
+    #c70039
+  );
+  animation: spin 2s linear infinite;
+  z-index: -2;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #ff0b55;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* button style end here */
+
+/* text color style start here */
+.text-color {
+  color: #ff0b55;
+}
+/* text color style end here */
