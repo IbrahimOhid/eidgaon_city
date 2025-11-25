@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { hospitalData } from "../../public/data/hospitalData";
 
 export const useHospitalList = () => {
   const [hospitals, setHospitals] = useState([]);
@@ -12,13 +13,8 @@ export const useHospitalList = () => {
         state: true,
         message: "Finding Hospitals Data..",
       });
-      const response = await fetch("/public/data/hospitalData.json");
-      if (!response.ok) {
-        const errorMessage = `Fetching Hospital List... ${response.status}`;
-        throw new Error(errorMessage);
-      }
-      const data = await response.json();
-      setHospitals(data);
+    
+      setHospitals(hospitalData);
     } catch (err) {
       setError(err);
     } finally {

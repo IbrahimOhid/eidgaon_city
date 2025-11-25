@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { serviceData } from "../../public/data/serviceData";
 
 export const useServiceList = () => {
   const [services, setServices] = useState([]);
@@ -8,30 +9,26 @@ export const useServiceList = () => {
   const fetchServicesData = async () => {
     try {
       setLoading({
-        ...loading,
         state: true,
-        message: "Finding Service List...",
+        message: "Loading Service List...",
       });
-      const response = await fetch("/public/data/serviceData.json");
-      if (!response.ok) {
-        const errorMessage = `Fetching Service List : ${response.status}`;
-        throw new Error(errorMessage);
-      }
-      const data = await response.json();
-      setServices(data);
+
+      setServices(serviceData);
+
     } catch (err) {
-      setError(err);
+      setError(err.message);
     } finally {
       setLoading({
-        ...loading,
         state: false,
         message: "",
       });
     }
   };
+
   useEffect(() => {
     fetchServicesData();
   }, []);
+
   return {
     services,
     loading,

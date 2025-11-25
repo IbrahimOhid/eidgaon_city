@@ -1,4 +1,4 @@
-[
+export const serviceData = [
     { "id": 1,  "icon": "/icons/history.png",            "name": "ইতিহাস" },
     { "id": 2,  "icon": "/icons/newspaper.png",          "name": "সংবাদপত্র" },
     { "id": 3,  "icon": "/icons/mosque.png",             "name": "মসজিদ" },
