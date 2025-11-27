@@ -1,11 +1,11 @@
 /*font URL ⤵ */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap");
 
 @import "tailwindcss";
 
 /*font start */
 @theme {
-  --font-Noto-Serif: "Noto Serif Bengali", serif;
+  --font-Hind-Siliguri: "Hind Siliguri", Sans-serif;
 }
 /*font end */
 /* button style start here */

@@ -1,6 +1,5 @@
 import React from "react";
-import Button from "../Button/Button";
-import VideoCarousel from "../Carousel/VideoCarousel";
+import Button from "../components/Button/Button";
 import { Link } from "react-router-dom";
 
 const Header = () => {

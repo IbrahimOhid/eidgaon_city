@@ -7,7 +7,7 @@ import Root from "./layout/Root.jsx";
 import ServiceList from "./components/Service/ServiceList";
 import Hospital from "./components/Hospital/Hospital.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
-import ProfileInfo from "./page/ProfileInfo.jsx";
+import ProfileInfo from "./components/ProfileInfo/ProfileInfo.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,11 +20,11 @@ const router = createBrowserRouter([
         element: <ServiceList />,
       },
       {
-        path: "/হাসপাতাল",
+        path: "/হাসপাতাল/",
         element: <Hospital />,
       },
       {
-        path: "/হাসপাতাল/:id",
+        path: "/হাসপাতাল/:hospitalId",
         element: <ProfileInfo />,
       },
     ],

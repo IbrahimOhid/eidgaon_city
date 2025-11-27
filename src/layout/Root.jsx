@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../components/Header/Header";
+import Header from "./Header";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer/Footer";
+import Footer from "./Footer";
 
 const Root = () => {
   return (
-    <div className="min-h-screen w-full bg-white relative font-tiro">
+    <div className="min-h-screen w-full bg-white relative font-Hind-Siliguri">
       <div
         className="absolute inset-0 z-0"
         style={{
