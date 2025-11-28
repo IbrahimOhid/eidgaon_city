@@ -1,10 +1,11 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LineSvg from "../../utils/LineSvg";
 import LocationImg from "../../../public/utils_img/location.png";
 import CallImg from "../../../public/utils_img/call.png";
 import OpenImg from "../../../public/utils_img/time.png";
 import DoctorIcon from "../../../public/utils_img/doctor.png";
+import WebsiteIcon from "../../../public/utils_img/website.png";
 
 const ProfileInfo = () => {
   const { state } = useLocation();
@@ -15,7 +16,7 @@ const ProfileInfo = () => {
     <div className="relative flex  justify-center items-center pt-20 px-12">
       <div className=" rounded-xl  p-8 transition-all duration-300 animate-fade-in">
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/3  mb-8 md:mb-0">
+          <div className="md:w-1/3 mt-2 mb-8 md:mb-0">
             <img
               src={image}
               alt={name}
@@ -23,34 +24,40 @@ const ProfileInfo = () => {
             />
             <h1 className="text-2xl font-bold  mb-2">{name}</h1>
 
-            <p className=" mb-4 flex gap-2  items-center">
+            <p className=" mb-2 flex gap-2  items-center">
               {" "}
               <span>
-                <img className="" src={LocationImg} alt="" />{" "}
+                <img className="w-8 h-8" src={LocationImg} alt="" />{" "}
               </span>
-              <span className="text-md">{address}</span>
+              <span className="text-md mt-2">{address}</span>
             </p>
-            <p className=" mb-4 flex gap-2  items-center">
+            <p className=" mb-2 flex gap-2  items-center">
               {" "}
               <span>
-                <img src={CallImg} alt="" />{" "}
+                <img className="w-8 h-8 " src={CallImg} alt="" />{" "}
               </span>
-              <span>{phone}</span>
+              <span className="text-md ">{phone}</span>
             </p>
 
-            <p className="mb-4 flex gap-2  items-center">
+            <p className="mb-2 flex gap-2  items-center">
               {" "}
               <span>
-                <img src={OpenImg} alt="" />{" "}
+                <img className="w-8 h-8 " src={OpenImg} alt="" />{" "}
               </span>
-              <span>{open}</span>
+              <span className="text-md ">{open}</span>
             </p>
             <p className=" flex gap-2   items-center">
               {" "}
               <span>
-                <img src={OpenImg} alt="" />{" "}
+                <img className="w-8 h-8 " src={WebsiteIcon} alt="" />{" "}
               </span>
-              <span>{website}</span>
+              <a
+                href={website}
+                target="_blank"
+                className=" underline text-sm font-semibold"
+              >
+                {website}
+              </a>
             </p>
           </div>
 
@@ -70,7 +77,7 @@ const ProfileInfo = () => {
               </span>
             </div>
 
-            <div className="container grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mb-10 ">
+            <div className="container  grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mb-10 ">
               {doctors.map((doctor) => {
                 const {
                   id,
@@ -83,27 +90,32 @@ const ProfileInfo = () => {
                 return (
                   <div
                     key={id}
-                    className="p-3 text-center  mt-16 rounded-lg shadow-md hover:shadow-xl"
+                    className="p-3 text-center  mt-16 rounded-lg shadow-md hover:shadow-xl bg-white"
                   >
                     <img
-                      alt={name}
+                      alt={d_name}
                       className="w-20 h-20 rounded-full -mt-16 mb-8 mx-auto shadow-md"
                       src={d_image}
                     />
                     <h3 className="text-md font-bold ">{d_name}</h3>
                     <p className="text-sm">{d_degree}</p>
                     <p className="">{d_work}</p>
-                    <p className="text-indigo-800">{d_visitingHour}</p>
+                    <p className="text-blue-800">সময়ঃ {d_visitingHour}</p>
                   </div>
                 );
               })}
             </div>
             {/* Google Map */}
-            <h2 className="text-xl font-semibold  mb-4">📍 লোকেশন ম্যাপ</h2>
+            <div className=" flex items-center text-xl font-semibold  mb-4">
+              <span>
+                <img className="w-12 mr-2" src={LocationImg} alt="" />
+              </span>{" "}
+              <span className="mt-2">লোকেশন ম্যাপ</span>
+            </div>
 
             <iframe
               src={map}
-              className="w-full h-64 rounded-xl mb-8 shadow"
+              className="w-full h-68 rounded-xl mb-8 shadow"
               loading="lazy"
               allowFullScreen
             ></iframe>
