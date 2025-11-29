@@ -9,6 +9,7 @@ import Hospital from "./components/Hospital/Hospital.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 import HospitalProfile from "./components/Hospital/HospitalProfile.jsx";
 import AboutUs from "./components/AboutUs/AboutUs.jsx";
+import History from "./components/History/History.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <ServiceList />,
+      },
+      {
+        path: "/ইতিহাস",
+        element: <History/>
       },
       {
         path: "/আমাদের_সম্পর্কে/",
