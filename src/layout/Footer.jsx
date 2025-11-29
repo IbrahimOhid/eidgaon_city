@@ -1,28 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className="relative">
       <footer className="flex flex-col space-y-10 justify-center py-10">
-        <nav className="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
-          <a className="hover:text-gray-900" href="#">
-            Home
-          </a>
-          <a className="hover:text-gray-900" href="#">
-            About
-          </a>
-          <a className="hover:text-gray-900" href="#">
-            Services
-          </a>
-          <a className="hover:text-gray-900" href="#">
-            Media
-          </a>
-          <a className="hover:text-gray-900" href="#">
-            Gallery
-          </a>
-          <a className="hover:text-gray-900" href="#">
-            Contact
-          </a>
+        <nav className="flex justify-center flex-wrap gap-6 text-gray-600 font-medium">
+          <Link className="hover:text-gray-900" to={'/'}>
+            হোম
+          </Link>
+          <Link className="hover:text-gray-900" to={'/আমাদের_সম্পর্কে'}>
+            আমাদের সম্পর্কে
+          </Link>
+          <Link className="hover:text-gray-900" to={'/'}>
+            সকল পরিষেবা
+          </Link>
+          <Link className="hover:text-gray-900" href="#">
+            যোগাযোগ
+          </Link>
         </nav>
         <div className="flex justify-center space-x-5">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
@@ -42,7 +37,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-center text-gray-700 font-medium">
-          © 2025 CoxsBazar.net | Developed by Mohammad Ibrahim
+          © 2025 Eidgoancity.com | Powered by iCox
         </p>
       </footer>
 

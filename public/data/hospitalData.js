@@ -4,18 +4,33 @@ export const hospitalData = [
     image: "/hospital_img/adhunik.png",
     name: "ঈদগাহ আধুনিক হাসপাতাল",
     phone: "০১৮৮৬-২৩৩৫৮৮",
-    address: "ডি সি রোড়, ইদগাঁও",
+    address: "ডি.সি রোড, ঈদগাঁও, কক্সবাজার",
     open: "২৪/৭ খোলা",
-    doctors: [],
+    website: "",
+    sheba: "",
+    map: "https://www.google.com/maps/embed?pb=!4v1764419743643!6m8!1m7!1spp6Be8SluTQyJJo5s_OE1Q!2m2!1d21.55352107451931!2d92.06087532662595!3f314.2605352044943!4f-1.4712449771071476!5f0.7820865974627469",
+    doctors: [
+      {
+        id: 1,
+        d_name: "ডাঃ ইমতিয়াজুল হক",
+        d_image: "../icons/m_doctor.png",
+        d_degree:
+          "এমবিবিএস (ডিইউ), এমপিএইচ, পিজিটি- মেডিসিন। ডিএমইউ, পিজিটি- রেডিওলজি এবং ইমেজিং",
+        d_work:
+          "খাজা ইউনুস আলী মেডিকেল কলেজ ও হাসপাতাল ৷ প্রাক্তন SIMO (বিশ্ব স্বাস্থ্য সংস্থা)",
+        d_visitingHour: " প্রতিদিন সকাল ০৯টা-রাত ১০টা পর্যন্ত",
+      },
+    ],
   },
   {
     hospitalId: 2,
     image: "/hospital_img/model.png",
     name: "ঈদগাহ মডেল হাসপাতাল",
     phone: "০১৮৩০-৭৪১৩১৫",
-    address: "ডি সি রোড়, ইদগাঁও",
+    address: "ডি.সি রোড, ঈদগাঁও, কক্সবাজার",
     open: "২৪/৭ খোলা",
     website: "https://eidgahmodelhospital.com",
+    sheba: "",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201451.6522162505!2d91.8502632963858!3d21.453031727265774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adb9001f70bc87%3A0x7d417d7bdc495a27!2z4KaI4Kam4KaX4Ka-4Ka5IOCmruCmoeCnh-CmsiDgprngpr7gprjgpqrgpr7gpqTgpr7gprI!5e1!3m2!1sen!2sbd!4v1764339647202!5m2!1sen!2sbd",
     doctors: [
       {
@@ -132,10 +147,28 @@ export const hospitalData = [
     image: "/hospital_img/medical_center.png",
     name: "ঈদগাহ মেডিকেল সেন্টার ও হাসপাতাল",
     phone: "০১৬১৮-১৪২৩৬৬",
-    address: "ডি সি রোড়, ইদগাঁও",
+    address: "ডি.সি রোড, ঈদগাঁও, কক্সবাজার",
     open: "২৪/৭ খোলা",
     website: "",
+    sheba: [
+      "ডিজিটাল এক্স-রে",
+      "প্যাথলজী",
+      "আল্ট্রাসনোগ্রাফী",
+      "ডিজিটাল ই.সি.জি",
+      "অক্সিজেন",
+      "নেবুলাইজেশন",
+      "ভ্যাক্সিনেশন",
+      "প্রসূতি সেবা",
+      "ব্লাড ক্রসম্যাচিং",
+      "কনসালটেন্ট",
+      "কম্পিউটারাইজ রিপোর্ট",
+      "সার্জন ডাক্তার দ্বারা খৎনা করা",
+      "আধুনিক যন্ত্রসাহায্যে, নাক-কান ফুড়ানো",
+      "টিউমার, হার্নিয়া পাইলস, এপেন্ডিসাইটিস",
+      "এবং সিজারিয়ান সহ সব ধরনের জেনারেল সার্জারী করা হয়।",
+    ],
     map: "https://www.google.com/maps/embed?pb=!3m2!1sen!2sbd!4v1764342997772!5m2!1sen!2sbd!6m8!1m7!1skHAXSmMe9J7dOrQ-3YfmLA!2m2!1d21.55384171867927!2d92.0612878861123!3f228.86023419466505!4f-1.4076860891477168!5f0.7820865974627469https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.8084141808554!2d92.05917287440248!3d21.55434536952109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adb9542888d963%3A0x8f8af15b95d5eaa2!2sEidgah%20Medical%20Center%20%26%20Hospital!5e0!3m2!1sen!2sbd!4v1764343421169!5m2!1sen!2sbd",
+
     doctors: [
       {
         id: 1,

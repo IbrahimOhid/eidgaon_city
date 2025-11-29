@@ -7,7 +7,8 @@ import Root from "./layout/Root.jsx";
 import ServiceList from "./components/Service/ServiceList";
 import Hospital from "./components/Hospital/Hospital.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
-import ProfileInfo from "./components/ProfileInfo/ProfileInfo.jsx";
+import HospitalProfile from "./components/Hospital/HospitalProfile.jsx";
+import AboutUs from "./components/AboutUs/AboutUs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +21,16 @@ const router = createBrowserRouter([
         element: <ServiceList />,
       },
       {
+        path: "/আমাদের_সম্পর্কে/",
+        element: <AboutUs/>
+      },
+      {
         path: "/হাসপাতাল/",
         element: <Hospital />,
       },
       {
         path: "/হাসপাতাল/:hospitalId",
-        element: <ProfileInfo />,
+        element: <HospitalProfile />,
       },
     ],
   },
